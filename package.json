@@ -1,0 +1,52 @@
+{
+  "name": "bookzero",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node --project tsconfig.build.json server/index.ts",
+    "build:server": "tsc --project tsconfig.build.json",
+    "build:next": "next build",
+    "build": "npm run build:server && npm run build:next",
+    "local": "NODE_ENV=development ts-node --project tsconfig.build.json dist/index.js",
+    "start": "NODE_ENV=production ts-node --project tsconfig.build.json dist/index.js",
+    "lint": "next lint",
+    "drizzle:generate": "drizzle-kit generate --config=./drizzle.config.ts",
+    "drizzle:push": "drizzle-kit push --config=./drizzle.config.ts",
+    "drizzle:introspect": "drizzle-kit introspect --config=./drizzle.config.ts",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.4",
+    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "@apollo/server": "^4.10.5",
+    "@neondatabase/serverless": "^0.9.4",
+    "drizzle-orm": "^0.32.1",
+    "express": "^4.19.2",
+    "next": "14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.3",
+    "@graphql-codegen/introspection": "^4.0.3",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.23.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

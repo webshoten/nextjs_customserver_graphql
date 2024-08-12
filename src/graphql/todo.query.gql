@@ -1,0 +1,6 @@
+query GetTodos {
+  getTodos {
+    taskId
+    contents
+  }
+}
