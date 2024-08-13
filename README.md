@@ -25,3 +25,13 @@ npm run dev
 npm run build
 npm run start
 ```
+
+# docker start up 
+
+```bash
+# start up
+docker build ./ -t nextjs
+docker run -e DATABASE_URL=postgresql://*****/:*****@********.ap-southeast-1.aws.neon.tech/******?sslmode=require -p 8080:8080 nextjs
+# shout down
+docker container stop {container}
+```
